@@ -1,10 +1,23 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'template_driven_forms';
+export class AppComponent implements AfterViewInit {
+  @ViewChild('meuInputFormControl') inputElFormControl!: NgModel;
+  @ViewChild('meuInput') inputEl!: ElementRef<HTMLInputElement>;
+
+  ngAfterViewInit(): void {
+    console.log('Input Original', this.inputEl);
+    console.log('Input Form control', this.inputElFormControl);
+  }
+
+  send() {
+    if (this.inputElFormControl.valid && this.inputElFormControl.touched) {
+      console.log('Enviado com sucesso!');
+    }
+  }
 }
