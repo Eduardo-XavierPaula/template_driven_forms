@@ -1,40 +1,6 @@
-<input
-  type="text"
-  ngModel
-  #meuInput
-  #meuInputFormControl="ngModel"
-  required
-  minlength="5"
-/>
-<!-- <input
-  type="text"
-  ngModel
-  #meuInput
-  #meuInputFormControl="ngModel"
-  required
-  minlength="5"
-  [ngClass]="{
-    valid: meuInputFormControl.valid && meuInputFormControl.touched,
-    invalid: meuInputFormControl.invalid && meuInputFormControl.touched
-  }"
-/> -->
-<!-- <input
-  type="text"
-  [ngModel]="'Teste'"
-  #meuInput
-  #meuInputFormControl="ngModel"
-  required
-  minlength="9"
-/> -->
-@if(meuInputFormControl.invalid && meuInputFormControl.touched){
-@if(meuInputFormControl.hasError('required')){
-<div>O campo nome é obrigatório.</div>
-} @else if(meuInputFormControl.hasError('minlength')){
-<div>O campo precisa de no mínimo 5 carácteres.</div>
-} }
-
-<p>Válido: {{ meuInputFormControl.valid }}</p>
-<p>Tocado: {{ meuInputFormControl.touched }}</p>
-<p>Sujo: {{ meuInputFormControl.dirty }}</p>
-<br />
-<button (click)="send()">Enviar</button>
+<div class="container">
+  <app-input-text></app-input-text>
+</div>
+<div class="container">
+  <app-textarea></app-textarea>
+</div>
