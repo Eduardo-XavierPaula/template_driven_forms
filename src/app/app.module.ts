@@ -7,9 +7,10 @@ import { FormsModule } from '@angular/forms';
 import { InputTextComponent } from './elements/input-text/input-text.component';
 import { TextareaComponent } from './elements/textarea/textarea.component';
 import { SelectComponent } from './elements/select/select.component';
+import { RadioComponent } from './elements/radio/radio.component';
 
 @NgModule({
-  declarations: [AppComponent, InputTextComponent, TextareaComponent, SelectComponent],
+  declarations: [AppComponent, InputTextComponent, TextareaComponent, SelectComponent, RadioComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
