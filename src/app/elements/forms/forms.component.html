@@ -1,0 +1,38 @@
+<h3>Formulário</h3>
+<form #meuForm="ngForm" (ngSubmit)="onSubmit(meuForm)">
+  <input type="text" required [(ngModel)]="inputText" name="nome" />
+  <input type="text" required [ngModel]="'Teste 2'" name="idade" />
+  <br />
+  <textarea name="descricao" id="descricao" [(ngModel)]="textarea"></textarea>
+  <br />
+  <select name="pais" id="pais" [(ngModel)]="select">
+    <option value="1">Brasil</option>
+    <option value="2">Espanha</option>
+  </select>
+  <br />
+  <input
+    type="radio"
+    name="groupStatus"
+    id="ativo"
+    value="1"
+    [(ngModel)]="radioButton"
+  />
+  <label for="ativo">ativo</label>
+  <input
+    type="radio"
+    name="groupStatus"
+    id="inativo"
+    value="2"
+    [(ngModel)]="radioButton"
+  />
+  <label for="inativo">inativo</label>
+  <br />
+  <input type="checkbox" name="condicao" id="condicao" [(ngModel)]="checkbox" />
+  <label for="condicao">Declaração de termos</label>
+  <br />
+  <p>Válido: {{ meuForm.valid }}</p>
+  <p>Tocado: {{ meuForm.touched }}</p>
+  <p>Sujo: {{ meuForm.dirty }}</p>
+  <button>Enviar</button>
+  <button type="reset" (click)="onReset(meuForm)">Limpar</button>
+</form>
