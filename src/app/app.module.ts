@@ -11,9 +11,12 @@ import { RadioComponent } from './elements/radio/radio.component';
 import { CheckboxComponent } from './elements/checkbox/checkbox.component';
 import { FormsComponent } from './elements/forms/forms.component';
 import { FormsGroupComponent } from './elements/forms-group/forms-group.component';
+import { FormUserComponent } from './elements/forms-with-children/form-user/form-user.component';
+import { FormProfessionComponent } from './elements/forms-with-children/form-profession/form-profession.component';
+import { MainFormComponent } from './elements/forms-with-children/main-form/main-form.component';
 
 @NgModule({
-  declarations: [AppComponent, InputTextComponent, TextareaComponent, SelectComponent, RadioComponent, CheckboxComponent, FormsComponent, FormsGroupComponent],
+  declarations: [AppComponent, InputTextComponent, TextareaComponent, SelectComponent, RadioComponent, CheckboxComponent, FormsComponent, FormsGroupComponent, FormUserComponent, FormProfessionComponent, MainFormComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
