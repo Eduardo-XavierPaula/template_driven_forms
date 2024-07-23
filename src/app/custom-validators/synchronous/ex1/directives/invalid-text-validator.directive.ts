@@ -18,7 +18,7 @@ import {
 })
 export class InvalidTextValidatorDirective implements Validator {
   validate(control: AbstractControl): ValidationErrors | null {
-    const isValid = !control.value.includes('felipe');
+    const isValid = !control.value?.includes('felipe');
 
     return isValid ? null : { invalidText: true };
   }

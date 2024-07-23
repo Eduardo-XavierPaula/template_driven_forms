@@ -16,9 +16,27 @@ import { FormProfessionComponent } from './elements/forms-with-children/form-pro
 import { MainFormComponent } from './elements/forms-with-children/main-form/main-form.component';
 import { CustomValidatorFormEx1Component } from './custom-validators/synchronous/ex1/custom-validator-form-ex1/custom-validator-form-ex1.component';
 import { InvalidTextValidatorDirective } from './custom-validators/synchronous/ex1/directives/invalid-text-validator.directive';
+import { CustomValidatorFormEx2Component } from './custom-validators/synchronous/ex2/custom-validator-form-ex2/custom-validator-form-ex2.component';
+import { DepartmentQuantityValidatorDirective } from './custom-validators/synchronous/ex2/directives/department-quantity-validator.directive';
 
 @NgModule({
-  declarations: [AppComponent, InputTextComponent, TextareaComponent, SelectComponent, RadioComponent, CheckboxComponent, FormsComponent, FormsGroupComponent, FormUserComponent, FormProfessionComponent, MainFormComponent, CustomValidatorFormEx1Component, InvalidTextValidatorDirective],
+  declarations: [
+    AppComponent,
+    InputTextComponent,
+    TextareaComponent,
+    SelectComponent,
+    RadioComponent,
+    CheckboxComponent,
+    FormsComponent,
+    FormsGroupComponent,
+    FormUserComponent,
+    FormProfessionComponent,
+    MainFormComponent,
+    CustomValidatorFormEx1Component,
+    InvalidTextValidatorDirective,
+    CustomValidatorFormEx2Component,
+    DepartmentQuantityValidatorDirective,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
