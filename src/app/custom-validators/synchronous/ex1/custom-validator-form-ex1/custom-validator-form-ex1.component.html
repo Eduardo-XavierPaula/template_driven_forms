@@ -1,0 +1,18 @@
+<form #meuForm="ngForm">
+  <input
+    type="text"
+    name="nome"
+    id="nome"
+    ngModel
+    #nomeControl="ngModel"
+    placeholder="Digite o nome"
+    appInvalidTextValidator
+    required
+  />
+  @if(nomeControl && nomeControl.invalid && (nomeControl.touched ||
+  nomeControl.dirty) && nomeControl.hasError('invalidText')){
+  <div>
+    <p>Texto inválido</p>
+  </div>
+  }
+</form>
