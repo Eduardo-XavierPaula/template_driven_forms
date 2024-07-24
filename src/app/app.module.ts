@@ -21,6 +21,7 @@ import { DepartmentQuantityValidatorDirective } from './custom-validators/synchr
 import { HttpClientModule } from '@angular/common/http';
 import { UserNameValidatorDirective } from './custom-validators/asynchronous/directives/user-name-validator.directive';
 import { AsyncCustomValidatorFormComponent } from './custom-validators/asynchronous/async-custom-validator-form/async-custom-validator-form.component';
+import { StandaloneControlFormComponent } from './elements/standalone-control-form/standalone-control-form.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { AsyncCustomValidatorFormComponent } from './custom-validators/asynchron
     DepartmentQuantityValidatorDirective,
     UserNameValidatorDirective,
     AsyncCustomValidatorFormComponent,
+    StandaloneControlFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
