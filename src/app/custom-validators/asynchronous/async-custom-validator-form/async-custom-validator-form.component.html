@@ -1,0 +1,30 @@
+<form #form="ngForm">
+  <input
+    type="text"
+    name="nome"
+    id="nome"
+    ngModel
+    [ngModelOptions]="{ updateOn: 'blur' }"
+    #nomeInputControl="ngModel"
+    placeholder="Digite o nome"
+    appUserNameValidator
+  />
+  @if (nomeInputControl.dirty) {
+  <div>
+    @if(nomeInputControl.pending){
+    <p style="color: orange">Verificando...</p>
+    } @else if (nomeInputControl.valid &&
+    !nomeInputControl.hasError('invalidUserName')) {
+    <p style="color: green">Usuário existente</p>
+    } @else if(nomeInputControl.invalid &&
+    nomeInputControl.hasError('invalidUserName')){
+    <p style="color: red">Usuário inexistente</p>
+    }
+  </div>
+  }
+
+  <p>Válido: {{ nomeInputControl.valid }}</p>
+  <p>Tocado: {{ nomeInputControl.touched }}</p>
+  <p>Sujo: {{ nomeInputControl.dirty }}</p>
+  <p>Pendent: {{ nomeInputControl.pending }}</p>
+</form>
